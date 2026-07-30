@@ -1,0 +1,347 @@
+:root {
+  --bg: #f7f3ea;
+  --bg-card: #fffcf5;
+  --text: #1c1917;
+  --text-secondary: #44403c;
+  --text-muted: #78716c;
+  --accent: #b8860b;
+  --accent-soft: rgba(184, 134, 11, 0.12);
+  --border: rgba(28, 25, 23, 0.12);
+  --max: 44rem;
+  --radius: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 120% 80% at 10% -10%, rgba(184, 134, 11, 0.09), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 100% 0%, rgba(120, 90, 40, 0.06), transparent 50%),
+    var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus-visible {
+  color: #8a6500;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--text);
+  color: #fff;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 252, 245, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.site-header-inner,
+.site-footer-inner,
+.main-inner {
+  width: min(100% - 2rem, var(--max));
+  margin-inline: auto;
+}
+
+.site-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.brand-tag {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover,
+.nav a:focus-visible,
+.nav a[aria-current="page"] {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
+
+.hero {
+  margin-bottom: 1.75rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.lead {
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 38rem;
+}
+
+.card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: block;
+  padding: 1.25rem 1.35rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 0 rgba(28, 25, 23, 0.03);
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: rgba(184, 134, 11, 0.45);
+  background: #fff;
+}
+
+.card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.meta {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.meta p {
+  margin: 0.35rem 0;
+}
+
+.prose h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.55rem, 3.5vw, 2.05rem);
+  line-height: 1.25;
+}
+
+.prose h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.prose h2:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.prose h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0 0 0.9rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.35rem;
+}
+
+.prose li::marker {
+  color: var(--accent);
+}
+
+.note {
+  margin: 1.25rem 0;
+  padding: 1rem 1.1rem;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.note p {
+  margin: 0;
+}
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+}
+
+.steps li {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 1rem 3.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0.9rem;
+  top: 1rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #8a6500;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.mailto-wrap {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.mailto-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: 999px;
+  background: var(--text);
+  color: #fffcf5 !important;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.mailto-btn:hover,
+.mailto-btn:focus-visible {
+  background: #000;
+  color: #fff !important;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 2rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  background: rgba(255, 252, 245, 0.55);
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+}
+
+.site-footer a {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 520px) {
+  .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mailto-btn {
+    width: 100%;
+  }
+}
