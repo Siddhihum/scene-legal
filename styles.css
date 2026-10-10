@@ -341,6 +341,10 @@ main {
     align-items: flex-start;
   }
 
+  .nav {
+    gap: 0.35rem 0.85rem;
+  }
+
   .mailto-btn {
     width: 100%;
   }

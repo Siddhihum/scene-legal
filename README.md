@@ -1,10 +1,13 @@
-# Scene – Legal Pages
+# Nie Fad – Legal Pages
 
-Öffentliche, statische Rechtstexte für die Android-App **Scene** (`com.christianhauer.path`).
+Öffentliche, statische Rechtstexte für die Android-App **Nie Fad** (`com.christianhauer.path`).
+
+Das GitHub-Repository heißt weiterhin `scene-legal` (technischer Pfad / bestehende URL).
 
 ## Inhalt
 
 - Startseite
+- Impressum
 - Datenschutzerklärung
 - Konto- und Datenlöschung
 
@@ -17,4 +20,4 @@ Hosted via GitHub Pages.
 
 Christian Hauer · Wien, Österreich · christian.hauer1@gmail.com
 
-Stand: 30. Juli 2026
+Stand: 10. Oktober 2026
